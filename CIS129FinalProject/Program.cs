@@ -3,31 +3,13 @@ Player wiz = new Player();
 Enemies goblin = new Enemies("Goblin", 3, "Body Slam", 2);
 Enemies orc = new Enemies("Orc", 5, "CLeave", 3);
 Enemies banshee = new Enemies("Banshee", 8, "Screech", 5);
-Console.WriteLine(goblin.getName());
-Console.WriteLine(goblin.getMaxHP());
-Console.WriteLine(goblin.getCurrentHP());
-Console.WriteLine(goblin.getAttackName());
-Console.WriteLine(goblin.getDamage());
-goblin.takeDamage(wiz.damageDealt());
-Console.WriteLine(goblin.getCurrentHP());
-Console.WriteLine(orc.getName());
-Console.WriteLine(orc.getMaxHP());
-Console.WriteLine(orc.getCurrentHP());
-Console.WriteLine(orc.getAttackName());
-Console.WriteLine(orc.getDamage());
-orc.takeDamage(wiz.damageDealt());
-Console.WriteLine(orc.getCurrentHP());
-Console.WriteLine(banshee.getName());
-Console.WriteLine(banshee.getMaxHP());
-Console.WriteLine(banshee.getCurrentHP());
-Console.WriteLine(banshee.getAttackName());
-Console.WriteLine(banshee.getDamage());
-banshee.takeDamage(wiz.damageDealt());
-Console.WriteLine(banshee.getCurrentHP());
-banshee.takeDamage(wiz.damageDealt());
-Console.WriteLine(banshee.getCurrentHP());
-wiz.takeDamage(banshee.damageDealt());
-wiz.healing();
-wiz.currentHPMP();
-wiz.getHealthPotion();
-wiz.getManaPotion();
+Console.WriteLine("Welcome to Wizert. You are a powerful wizard trapped in a dungeon. Find the exit before the monsters find you and defeat you. All input you give are in the form of number from 1 to 4. Good luck!!");
+//put map starting here and make input grab a loop.
+string input = Console.ReadLine();
+Validation valid = new Validation();
+valid.setInput(input);
+valid.validateInput();
+if (valid.getValid())
+{
+    Console.WriteLine("this is valid.");
+}
