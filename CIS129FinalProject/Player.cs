@@ -89,5 +89,9 @@ namespace CIS129FinalProject
             }
             Console.WriteLine($"{playerName} is resoring mana. Current MP is {currentMP} / {maxMP}.");
         }
+        public int getHp()
+        {
+            return currentHP;
+        }
     }
 }

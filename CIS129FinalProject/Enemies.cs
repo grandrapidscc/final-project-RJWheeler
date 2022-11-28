@@ -21,6 +21,9 @@ namespace CIS129FinalProject
             this.attackName = attackName;
             this.damage = damage;
         }
+        public void setHP() {
+            currentHP = maxHp;
+        }
         public string getName()
         {
             return enemyName;
@@ -47,7 +50,6 @@ namespace CIS129FinalProject
             if (currentHP <= 0)
             {
                 Console.WriteLine($"{enemyName} has been slain.");
-                currentHP = maxHp;
             }
             else
             {

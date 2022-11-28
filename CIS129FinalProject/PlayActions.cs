@@ -48,7 +48,7 @@ namespace CIS129FinalProject
             {
                 y = y - 1;
             }
-            if (x < 5 && x > 0 && y < 5 && y > 0)
+            if (x < 5 && x >= 0 && y < 5 && y >= 0)
             {
                 isAtEnd();
                 isBattle();
@@ -87,7 +87,7 @@ namespace CIS129FinalProject
             int location = x + y;
             if (location % 2 == 0)
             {
-                finditem = true;
+                battle = true;
             }
         }
 
@@ -96,7 +96,7 @@ namespace CIS129FinalProject
             int location = x + y;
             if (location % 2 != 0)
             {
-                battle = true;
+                finditem = true;
             }
         }
         public bool GetAtEnd()
