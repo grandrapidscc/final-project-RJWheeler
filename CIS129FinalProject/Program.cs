@@ -26,7 +26,7 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
             if (enemy % 3 == 0)
             {
                 Console.WriteLine($"A goblin blocks your path.");
-                while (goblin.getCurrentHP() > 0)
+                while (goblin.getCurrentHP() > 0 && wiz.getHp() > 0)
                 {
                     Console.WriteLine($"You have encountered a {goblin.getName()}.\r\nIt's the current HP {goblin.getCurrentHP()}.\r\nPress...\r\n1.\tTo Attack\r\n2.\tTo Heal\r\n3.\tTo Attempt to Flee");
                     battleInput = Console.ReadLine();
@@ -36,8 +36,8 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
                     {
                         if(battleInput == "1")
                         {
-                            goblin.takeDamage(wiz.damageDealt());
                             wiz.takeDamage(goblin.damageDealt());
+                            goblin.takeDamage(wiz.damageDealt());
                         }
                         else if (battleInput == "2")
                         {
@@ -71,7 +71,7 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
             else if (enemy % 2 == 0)
             {
                 Console.WriteLine($"You come into a room and It reeks of orc. You see it sitting in the corner Holding an axe. It's current HP is {orc.getCurrentHP()}");
-                while (orc.getCurrentHP() > 0)
+                while (orc.getCurrentHP() > 0 && wiz.getHp() > 0)
                 {
                     Console.WriteLine($"You have encountered a {orc.getName()}.\r\nIt's the current HP {orc.getCurrentHP()}.\r\nPress...\r\n1.\tTo Attack\r\n2.\tTo Heal\r\n3.\tTo Attempt to Flee");
                     battleInput = Console.ReadLine();
@@ -81,8 +81,8 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
                     {
                         if (battleInput == "1")
                         {
-                            orc.takeDamage(wiz.damageDealt());
                             wiz.takeDamage(orc.damageDealt());
+                            orc.takeDamage(wiz.damageDealt());
                         }
                         else if (battleInput == "2")
                         {
@@ -115,7 +115,7 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
             else if (enemy % 1 == 0)
             {
                 Console.WriteLine($"You hear a piercing scream.You see the ghostly form of a banshee. It's current HP is {banshee.getCurrentHP()}");
-                while (banshee.getCurrentHP() > 0)
+                while (banshee.getCurrentHP() > 0 && wiz.getHp() > 0)
                 {
                     Console.WriteLine($"You have encountered a {banshee.getName()}.\r\nIt's the current HP {banshee.getCurrentHP()}.\r\nPress...\r\n1.\tTo Attack\r\n2.\tTo Heal\r\n3.\tTo Attempt to Flee");
                     battleInput = Console.ReadLine();
@@ -125,8 +125,8 @@ while (!map.GetAtEnd() && wiz.getHp() > 0) {
                     {
                         if (battleInput == "1")
                         {
-                            banshee.takeDamage(wiz.damageDealt());
                             wiz.takeDamage(banshee.damageDealt());
+                            banshee.takeDamage(wiz.damageDealt());
                         }
                         else if (battleInput == "2")
                         {

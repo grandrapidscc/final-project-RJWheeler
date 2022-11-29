@@ -27,7 +27,6 @@ namespace CIS129FinalProject
             if (currentHP <= 0)
             {
                 Console.WriteLine($"{playerName} has been slain.");
-                currentHP = maxHP;
             }
             else
             {
